@@ -123,10 +123,10 @@ def init():
     copy_button.place(relx=0.925, rely=0.595)
 
     gen_button = Button(background,
-                        text="Generate",
-                        font=("Terminal", 20),
+                        text='Generate',
+                        font=('Terminal', 20),
                         bd=5,
-                        relief="ridge",
+                        relief='ridge',
                         command=lambda:generate_password(int(length_display.get()),
                                                         include_uppercase.get(),
                                                         include_numbers.get(),
@@ -145,5 +145,5 @@ def init():
     root.mainloop()
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     init()
