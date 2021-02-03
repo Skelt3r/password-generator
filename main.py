@@ -92,10 +92,10 @@ def init():
     symbols_var = IntVar()
 
     uppercase_check = Checkbutton(background,
-                                bg='white',
-                                activebackground='white',
-                                variable=uppercase_var,
-                                command=lambda:check_uncheck(uppercase_var, include_uppercase))
+                                  bg='white',
+                                  activebackground='white',
+                                  variable=uppercase_var,
+                                  command=lambda:check_uncheck(uppercase_var, include_uppercase))
 
     numbers_check = Checkbutton(background,
                                 bg='white',
@@ -125,9 +125,9 @@ def init():
                         bd=5,
                         relief='ridge',
                         command=lambda:generate_password(int(length_display.get()),
-                                                        include_uppercase.get(),
-                                                        include_numbers.get(),
-                                                        include_symbols.get()))
+                                                         include_uppercase.get(),
+                                                         include_numbers.get(),
+                                                         include_symbols.get()))
 
     gen_button.place(relx=0.5, rely=0.75, anchor='c')
 
