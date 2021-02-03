@@ -44,10 +44,7 @@ def init():
 
 
     def check_uncheck(var, arg):
-        if var.get() == 1:
-            arg.set(True)
-        else:
-            arg.set(False)
+        arg.set(True) if var.get() == 1 else arg.set(False)
 
 
     root = Tk()
