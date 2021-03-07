@@ -1,5 +1,4 @@
 # Password Generator
-A password generator and GUI built with Python/Tkinter.
 
 Running the main file will initialize the GUI by default. \
 `> PasswordGenerator.init()`
