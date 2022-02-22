@@ -4,7 +4,7 @@ from string import ascii_letters, ascii_lowercase, digits
 from tkinter import *
 
 
-# Password generator class with standalone generator function and full GUI
+# Password generator class with standalone generator function and GUI
 class PasswordGenerator():
     # Generate a random password based on the arguments given
     def generate_password(self, length=12, uppercase=True, numbers=True, symbols=True, standalone=False):
@@ -82,10 +82,10 @@ class PasswordGenerator():
         symbols_label = Label(background, bg='white', text='Include Symbols?', font=self.default_font)
         
         logo.place(relx=0.5, rely=0.1, anchor='c')
-        length_label.place(relx=0.01, rely=0.25)
-        uppercase_label.place(relx=0.01, rely=0.325)
-        numbers_label.place(relx=0.01, rely=0.4)
-        symbols_label.place(relx=0.01, rely=0.475)
+        length_label.place(relx=0.3, rely=0.25)
+        uppercase_label.place(relx=0.3, rely=0.325)
+        numbers_label.place(relx=0.3, rely=0.4)
+        symbols_label.place(relx=0.3, rely=0.475)
 
         # Password length menu
         length_opts = [8, 12, 16, 24, 32, 48, 64]
@@ -96,7 +96,7 @@ class PasswordGenerator():
         length_menu = OptionMenu(background, self.current_length, *length_opts)
         length_menu.config(bg='white', font='SysFixed')
         length_menu['menu'].config(bg='white', font='SysFixed')
-        length_menu.place(relx=0.275, rely=0.25)
+        length_menu.place(relx=0.6, rely=0.25)
 
         # Checkbox variables
         include_uppercase = BooleanVar()
@@ -126,9 +126,9 @@ class PasswordGenerator():
                                     variable=symbols_var,
                                     command=lambda:self.check_uncheck(symbols_var, include_symbols))
 
-        uppercase_check.place(relx=0.275, rely=0.33)
-        numbers_check.place(relx=0.275, rely=0.405)
-        symbols_check.place(relx=0.275, rely=0.48)
+        uppercase_check.place(relx=0.6, rely=0.33)
+        numbers_check.place(relx=0.6, rely=0.405)
+        symbols_check.place(relx=0.6, rely=0.48)
 
         # Result field
         self.result_entry = Entry(background, bg='white', relief='sunken', justify='center', font=self.default_font)
